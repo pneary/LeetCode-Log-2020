@@ -16,14 +16,14 @@ public class Solution {
             return false;     
         }
         
-        ArrayList<ListNode> list = new ArrayList();
-        list.add(head);
+        Set<ListNode> set = new HashSet();
+        set.add(head);
         while(head.next != null){
-            if (list.contains(head.next)){
+            if (set.contains(head.next)){
                 return true;
             } else {
                 head = head.next;
-                list.add(head);
+                set.add(head);
             }
         }
         return false;
